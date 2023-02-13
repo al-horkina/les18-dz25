@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body style="display: flex; justify-content: center; align-content: center; flex-flow: column">
+<h2>Списки</h2>
+<button id="list-add">Додати список</button>
+<button id="list-del">Видалити список</button>
+
+<ul class="list">
+   <!-- <li>
+        <span>Перший список</span>
+        <ul>
+            <li>1 елемент списку</li>
+            <li>2 елемент списку</li>
+            <li>3 елемент списку</li>
+            <li>4 елемент списку</li>
+        </ul>
+    </li>
+    <li>
+        <span>Другий список</span>
+        <ul>
+            <li>5 елемент списку</li>
+            <li>6 елемент списку</li>
+            <li>7 елемент списку</li>
+            <li>8 елемент списку</li>
+        </ul>
+    </li>-->
+
+</ul>
+
+
+</body>
+<style>
+
+    body {
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: sans-serif;
+        padding: 12px;
+    }
+
+    .list {
+        padding: 0 10px;
+    }
+
+    .list li {
+        list-style-type: none;
+    }
+
+    .list span {
+        cursor: pointer;
+        position: relative;
+    }
+
+    .list span::before {
+        content: '-';
+        font-weight: bold;
+        position: absolute;
+        left: -10px;
+    }
+
+    .list span.hide::before {
+        content: '+';
+        font-weight: bold;
+        position: absolute;
+        left: -20px;
+    }
+
+    .list span.hide + ul {
+        display: none;
+    }
+
+    button {
+        width: 200px;
+        margin-top: 5px;
+    }
+
+
+
+</style>
+<script src="index.js">
+</script>
+</html>
